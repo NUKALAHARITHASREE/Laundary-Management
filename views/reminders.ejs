@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Reminder</title>
+  <style>
+    /* General styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Form container */
+    form {
+      background-color: white;
+      padding: 20px;
+      margin: 0 auto;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    select, input[type="time"], input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    select, input[type="time"] {
+      background-color: #f9f9f9;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Set Laundry Reminder</h1>
+  <form action="/set-reminder" method="POST">
+    <label for="laundryDay">Select Laundry Day:</label>
+    <select id="laundryDay" name="laundryDay" required>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+
+    <label for="laundryTime">Select Laundry Time:</label>
+    <input type="time" id="laundryTime" name="laundryTime" required>
+
+    <input type="submit" value="Set Reminder">
+  </form>
+</body>
+</html>

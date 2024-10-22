@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Chore</title>
+</head>
+<body>
+    <h1>Add New Chore</h1>
+
+    <form action="/chores" method="POST">
+        <label for="choreName">Chore Name:</label>
+        <input type="text" id="choreName" name="choreName" required><br>
+
+        <label for="assignedTo">Assigned To:</label>
+        <input type="text" id="assignedTo" name="assignedTo" required><br>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate" required><br>
+
+        <button type="submit">Add Chore</button>
+    </form>
+
+    <a href="/chores">Back to Chores</a>
+</body>
+</html>
